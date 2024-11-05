@@ -1,0 +1,212 @@
+/* Estilos Generales */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #131313, #102d30, #131313);
+    color: #fff; /* Cambia el color del texto a blanco para contraste */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #102d30;
+    padding: 1rem;
+    color: #fff;
+    position: relative;
+    z-index: 1; /* Asegura que el header esté por encima de otros elementos */
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px; /* Altura del efecto de difuminación reducido */
+    background: linear-gradient(to bottom, rgba(19, 19, 19, 0) 0%, rgba(19, 19, 19, 0.5) 100%); /* Gradiente más sutil */
+}
+
+/* Sección Izquierda */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.blog-title {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* Menú Hamburguesa */
+.menu-checkbox {
+    display: none;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+    margin-left: auto;
+}
+
+.menu-icon span {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    transition: 0.3s;
+}
+
+.navbar {
+    position: absolute;
+    top: 60px; /* Asegura que el menú se desplace hacia abajo */
+    right: 0;
+    z-index: 2; /* Asegura que el menú hamburguesa esté por encima del efecto de difuminación */
+}
+
+.navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: #102d30;
+    padding: 1rem;
+    margin: 0;
+    list-style-type: none;
+    width: 150px;
+}
+
+.menu-checkbox:checked + .menu-icon + .navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    display: flex; /* Cambiar a flex para alinear icono y texto */
+    align-items: center; /* Alinear verticalmente el contenido */
+}
+
+.navbar a:hover {
+    background-color: #444;
+}
+
+/* Estilos para los iconos del menú */
+.menu-icon-img {
+    height: 20px; /* Ajusta la altura según tus necesidades */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+/* Sección con fondo */
+.section {
+    padding: 1.5rem 0; /* Reduce el padding superior e inferior */
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Comienza completamente transparente */
+    }
+    to {
+        opacity: 1; /* Termina completamente opaco */
+    }
+}
+
+/* Estilos para el logo centrado */
+.center-logo {
+    height: 180px; /* Aumenta la altura del logo según tus necesidades */
+    margin-bottom: -1.3rem; /* Reduce el espacio entre el logo y el texto */
+    animation: fadeIn 3s ease-in-out; /* Agrega la animación de desvanecimiento */
+}
+
+/* Estilos para el texto de bienvenida con efecto de escritura */
+.welcome-text {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(30, end);
+    font-size: 3.7rem; /* Aumentar el tamaño de la fuente para que sea más grande que el nombre */
+    margin-bottom: 0.2rem; /* Reduce el espacio entre el encabezado y el nombre */
+}
+
+/* Estilos para el nombre */
+.name-text {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem; /* Mantiene el tamaño del nombre */
+    margin: 0; /* Elimina márgenes */
+}
+
+/* Animación de escritura */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Estilos para los rectángulos de información */
+.info-rectangle {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    width: 90%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #102d30;
+    color: #fff;
+    text-align: center;
+    padding: 1rem; /* Aumenta el padding para hacer el footer más alto */
+    position: relative;
+    font-family: Arial, sans-serif; /* Cambia la fuente a Arial */
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px; /* Altura del efecto de difuminación reducido */
+    background: linear-gradient(to top, rgba(19, 19, 19, 0) 0%, rgba(19, 19, 19, 0.5) 100%); /* Gradiente más sutil */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+}
+
+.footer-icon {
+    height: 20px;
+    margin-right: 5px;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+}
