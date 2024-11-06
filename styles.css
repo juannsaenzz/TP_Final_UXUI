@@ -83,12 +83,13 @@ body {
 }
 
 .navbar a:hover {
-    background-color: #444;
+    background-color: #131313;
 }
 
 .menu-icon-img {
     height: 25px;  /* Tamaño ajustado */
     margin-right: 10px;
+    margin-left: 10px;
 }
 
 /* Sección con fondo */
