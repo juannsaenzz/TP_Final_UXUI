@@ -29,21 +29,55 @@
     </nav>
 </header>
 
-<!-- Imagen de fondo -->
 <div class="background-image">
-    <!-- Contenido principal -->
     <section class="section">
-        <img src="/assets/img/logo.png" alt="Logo" class="center-logo"> <!-- Logo centrado -->
+        <img src="/assets/img/logo.png" alt="Logo" class="center-logo">
         <h1 class="welcome-text">Bienvenidos/as a Mi Blog Personal</h1>
         <p class="name-text">Saenz de Santa María, Juan Ignacio</p>
         
-        <!-- Contenedores rectangulares de información -->
+        <!-- Rectángulo de información Sobre mí -->
         <div class="info-rectangle">
-            <p>Información del primer rectángulo</p>
+            <div class="about-header" onclick="toggleText('about-text')">
+                <img src="/assets/img/mas.png" alt="Icono Sobre mí" class="about-icon">
+                <h2 class="about-title">Sobre mí</h2>
+            </div>
+            <div id="about-text" class="info-text">
+                Soy estudiante de la Licenciatura en Sistemas de Información en la UADER y actualmente tengo 19 años. En estos momentos, estoy finalizando el segundo año de la carrera. Hace dos años me mudé a Concepción del Uruguay, aunque soy oriundo de Rosario del Tala.
+            </div>
         </div>
+
+        <!-- Rectángulo de información Mis habilidades -->
         <div class="info-rectangle">
-            <p>Información del segundo rectángulo</p>
+            <div class="about-header" onclick="toggleText('skills-text')">
+                <img src="/assets/img/mas.png" alt="Icono Mis habilidades" class="about-icon">
+                <h2 class="about-title">Mis habilidades en Programación y Software</h2>
+            </div>
+            <div id="skills-text" class="info-text">
+                <ul>
+                    <li><img src="/assets/img/logo_python.png" alt="Python" class="skill-icon"> Conocimientos sobre Python</li>
+                    <li><img src="/assets/img/logo_java.png" alt="Java" class="skill-icon"> Conocimientos sobre Java</li>
+                    <li><img src="/assets/img/logo_html.png" alt="HTML" class="skill-icon"> Conocimientos sobre HTML</li>
+                    <li><img src="/assets/img/logo_css.png" alt="CSS" class="skill-icon"> Conocimientos sobre CSS</li>
+                    <li><img src="/assets/img/logo_javascript.png" alt="JavaScript" class="skill-icon"> Conocimientos sobre JavaScript</li>
+                    <li><img src="/assets/img/logo_nodejs.png" alt="Node.js" class="skill-icon"> Conocimientos sobre Node.js</li>
+                    <li><img src="/assets/img/logo_postman.png" alt="Postman" class="skill-icon"> Conocimientos sobre Postman</li>
+                </ul>
+            </div>
         </div>
+
+        <!-- Rectángulo de información Cursos realizados -->
+        <div class="info-rectangle">
+            <div class="about-header" onclick="toggleText('courses-text')">
+                <img src="/assets/img/mas.png" alt="Icono Cursos realizados" class="about-icon">
+                <h2 class="about-title">Cursos realizados</h2>
+            </div>
+            <div id="courses-text" class="info-text">
+                <ul>
+                    <li><img src="/assets/img/logo_uader.png" alt="Curso 1" class="course-icon"> Curso de Programacion en Java (2023)</li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 </div>
 
@@ -62,6 +96,13 @@
         &copy; 2024 Mi Blog Personal. Todos los derechos reservados.
     </div>
 </footer>
+
+<script>
+function toggleText(id) {
+    const element = document.getElementById(id);
+    element.style.display = element.style.display === "none" ? "block" : "none";
+}
+</script>
 
 </body>
 </html>

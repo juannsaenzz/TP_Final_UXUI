@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #131313, #102d30, #131313);
-    color: #fff; /* Cambia el color del texto a blanco para contraste */
+    color: #fff;
 }
 
 /* Header */
@@ -15,28 +15,15 @@ body {
     background-color: #102d30;
     padding: 1rem;
     color: #fff;
-    position: relative;
-    z-index: 1; /* Asegura que el header esté por encima de otros elementos */
 }
 
-.header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 10px; /* Altura del efecto de difuminación reducido */
-    background: linear-gradient(to bottom, rgba(19, 19, 19, 0) 0%, rgba(19, 19, 19, 0.5) 100%); /* Gradiente más sutil */
-}
-
-/* Sección Izquierda */
 .header-left {
     display: flex;
     align-items: center;
 }
 
 .logo {
-    height: 40px;
+    height: 50px;  /* Tamaño ajustado */
     margin-right: 10px;
 }
 
@@ -68,9 +55,9 @@ body {
 
 .navbar {
     position: absolute;
-    top: 60px; /* Asegura que el menú se desplace hacia abajo */
+    top: 60px;
     right: 0;
-    z-index: 2; /* Asegura que el menú hamburguesa esté por encima del efecto de difuminación */
+    z-index: 2;
 }
 
 .navbar ul {
@@ -91,23 +78,22 @@ body {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 0;
-    display: flex; /* Cambiar a flex para alinear icono y texto */
-    align-items: center; /* Alinear verticalmente el contenido */
+    display: flex;
+    align-items: center;
 }
 
 .navbar a:hover {
     background-color: #444;
 }
 
-/* Estilos para los iconos del menú */
 .menu-icon-img {
-    height: 20px; /* Ajusta la altura según tus necesidades */
-    margin-right: 10px; /* Espacio entre el icono y el texto */
+    height: 25px;  /* Tamaño ajustado */
+    margin-right: 10px;
 }
 
 /* Sección con fondo */
 .section {
-    padding: 1.5rem 0; /* Reduce el padding superior e inferior */
+    padding: 1.5rem 0;
     text-align: center;
     min-height: 100vh;
     display: flex;
@@ -118,41 +104,33 @@ body {
 
 /* Animación de desvanecimiento */
 @keyframes fadeIn {
-    from {
-        opacity: 0; /* Comienza completamente transparente */
-    }
-    to {
-        opacity: 1; /* Termina completamente opaco */
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-/* Estilos para el logo centrado */
 .center-logo {
-    height: 180px; /* Aumenta la altura del logo según tus necesidades */
-    margin-bottom: -1.3rem; /* Reduce el espacio entre el logo y el texto */
-    animation: fadeIn 3s ease-in-out; /* Agrega la animación de desvanecimiento */
+    height: 180px;
+    margin-bottom: -1.3rem;
+    animation: fadeIn 3s ease-in-out;
 }
 
-/* Estilos para el texto de bienvenida con efecto de escritura */
 .welcome-text {
     color: white;
     font-family: 'Courier New', Courier, monospace;
     overflow: hidden;
     white-space: nowrap;
     animation: typing 3s steps(30, end);
-    font-size: 3.7rem; /* Aumentar el tamaño de la fuente para que sea más grande que el nombre */
-    margin-bottom: 0.2rem; /* Reduce el espacio entre el encabezado y el nombre */
+    font-size: 3.7rem;
+    margin-bottom: 0.2rem;
 }
 
-/* Estilos para el nombre */
 .name-text {
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem; /* Mantiene el tamaño del nombre */
-    margin: 0; /* Elimina márgenes */
+    font-size: 2rem;
+    margin: 0;
 }
 
-/* Animación de escritura */
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
@@ -160,14 +138,65 @@ body {
 
 /* Estilos para los rectángulos de información */
 .info-rectangle {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
+    background-color: #131313;
+    border: 1px solid #14747e;
     padding: 2rem;
-    margin: 1rem auto;
-    max-width: 800px;
-    width: 90%;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem auto;
+    max-width: 850px;
+    width: 95%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    color: #131313;
+    font-size: 1.2rem;
+}
+
+/* Encabezado de los rectángulos de información */
+.about-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.about-icon {
+    height: 50px;  /* Tamaño reducido */
+    margin-right: 15px;
+}
+
+.about-title {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+
+/* Texto desplegable en cada rectángulo */
+.info-text {
+    display: none;
+    font-size: 1.3rem;
+    color: #c1c1c1;
+    margin-top: 10px;
+}
+
+/* Estilos para las listas */
+ul {
+    list-style-type: none; /* Elimina el punto de cada componente de la lista */
+    padding-left: 0; /* Elimina el margen de la izquierda */
+}
+
+li {
+    text-align: left; /* Alinea el texto de las listas a la izquierda */
+    font-size: 1.3rem;
+    color: #c1c1c1;
+    margin-bottom: 5px;
+}
+
+li img {
+    width: 20px;  /* Tamaño reducido */
+    height: 20px; /* Tamaño reducido */
+    margin-right: 10px;
+    object-fit: cover;
+    margin-left: 65px;
 }
 
 /* Footer */
@@ -175,19 +204,8 @@ body {
     background-color: #102d30;
     color: #fff;
     text-align: center;
-    padding: 1rem; /* Aumenta el padding para hacer el footer más alto */
-    position: relative;
-    font-family: Arial, sans-serif; /* Cambia la fuente a Arial */
-}
-
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 10px; /* Altura del efecto de difuminación reducido */
-    background: linear-gradient(to top, rgba(19, 19, 19, 0) 0%, rgba(19, 19, 19, 0.5) 100%); /* Gradiente más sutil */
+    padding: 1rem;
+    font-family: Arial, sans-serif;
 }
 
 .footer-content {
