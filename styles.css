@@ -23,7 +23,7 @@ body {
 }
 
 .logo {
-    height: 50px;  /* Tamaño ajustado */
+    height: 50px;
     margin-right: 10px;
 }
 
@@ -87,7 +87,7 @@ body {
 }
 
 .menu-icon-img {
-    height: 25px;  /* Tamaño ajustado */
+    height: 25px;
     margin-right: 10px;
     margin-left: 10px;
 }
@@ -149,9 +149,13 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     color: #131313;
     font-size: 1.2rem;
+    transition: background-color 0.3s ease;
 }
 
-/* Encabezado de los rectángulos de información */
+.info-rectangle:hover {
+    background-color: #1e1e1e;
+}
+
 .about-header {
     display: flex;
     align-items: center;
@@ -159,7 +163,7 @@ body {
 }
 
 .about-icon {
-    height: 50px;  /* Tamaño reducido */
+    height: 50px;
     margin-right: 15px;
 }
 
@@ -171,7 +175,6 @@ body {
     text-align: left;
 }
 
-/* Texto desplegable en cada rectángulo */
 .info-text {
     display: none;
     font-size: 1.3rem;
@@ -181,23 +184,136 @@ body {
 
 /* Estilos para las listas */
 ul {
-    list-style-type: none; /* Elimina el punto de cada componente de la lista */
-    padding-left: 0; /* Elimina el margen de la izquierda */
+    list-style-type: none;
+    padding-left: 0;
 }
 
 li {
-    text-align: left; /* Alinea el texto de las listas a la izquierda */
+    text-align: left;
     font-size: 1.3rem;
     color: #c1c1c1;
     margin-bottom: 5px;
 }
 
 li img {
-    width: 20px;  /* Tamaño reducido */
-    height: 20px; /* Tamaño reducido */
+    width: 20px;
+    height: 20px;
     margin-right: 10px;
     object-fit: cover;
     margin-left: 65px;
+}
+
+/* Sección de Contacto */ 
+.contact-title {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3.7rem;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Más espacio entre los cuadros */
+    justify-content: center;
+    padding: 2rem 0;
+    max-width: 900px; /* Ampliado para ajustar cuadrados más grandes */
+    margin: 0 auto;
+}
+
+.contact-box {
+    background-color: #131313;
+    border: 1px solid #14747e;
+    width: calc((100% / 3) - 2rem); /* Aumenta el tamaño de los cuadros */
+    aspect-ratio: 1; /* Mantiene proporción cuadrada */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Asegura que la imagen y el texto estén en una columna */
+    align-items: center; /* Centra los elementos dentro del cuadro */
+    justify-content: center; /* Centra los elementos en el eje vertical */
+    text-align: center;
+    font-size: calc(1.3rem + 0.5vw); /* Ajuste de tamaño de fuente */
+    transition: background-color 0.3s ease;
+}
+
+.contact-box:hover {
+    background-color: #1e1e1e;
+}
+
+.contact-box img {
+    width: 200px; /* Ajuste del tamaño de las imágenes dentro de los cuadros */
+    height: 200px;
+}
+
+.contact-box {
+    font-size: 1.3rem;
+    margin: 0;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.contact-box p {
+    margin-bottom: 40px;
+    margin-top: -5px;
+}
+
+/* Sección de Proyectos */
+.projects-title {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3.7rem;
+}
+
+/* Estilo de la cuadrícula de proyectos */
+.projects-grid {
+    display: flex;
+    flex-direction: column; /* Alinea los rectángulos en una sola columna */
+    gap: 1.5rem; /* Espacio entre los rectángulos */
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.project-box {
+    background-color: #131313;
+    border: 1px solid #14747e;
+    width: 90%; /* Aumenta el ancho de los rectángulos */
+    height: 150px; /* Disminuye la altura de los rectángulos */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto; /* Centra los rectángulos */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.project-box:hover {
+    background-color: #1e1e1e;
+    border-color: #fff; /* Cambia el color del borde al pasar el cursor */
+}
+
+.project-image {
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    height: 100px;
+    margin-left: 15px;
+}
+
+.project-text {
+    flex-grow: 1;
+    padding: 0 15px;
+}
+
+.project-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-link-image {
+    width: 30px;
+    height: 30px;
 }
 
 /* Footer */
