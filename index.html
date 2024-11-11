@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 <header class="header">
     <div class="header-left">
         <a href="index.html">
-            <img src="/assets/img/logo.png" alt="Logo" class="logo title="Ir al inicio"">
+            <img src="/assets/img/logo.png" alt="Logo" class="logo" title="Ir al inicio">
         </a>
         <a href="index.html" class="blog-title" title="Ir al inicio">Mi Blog Personal</a>
     </div>
@@ -24,7 +24,7 @@
     </label>
     <nav class="navbar">
         <ul>
-            <li><a href="index.html"><img src="/assets/img/inicio.png" alt="Inicio" class="menu-icon-img"> Inico</a></li>
+            <li><a href="index.html"><img src="/assets/img/inicio.png" alt="Inicio" class="menu-icon-img"> Inicio</a></li>
             <li><a href="proyectos.html"><img src="/assets/img/proyectos.png" alt="Proyectos" class="menu-icon-img"> Proyectos</a></li>
             <li><a href="contacto.html"><img src="/assets/img/contacto.png" alt="Contacto" class="menu-icon-img"> Contacto</a></li>
         </ul>
@@ -38,21 +38,21 @@
         <p class="name-text">Saenz de Santa María, Juan Ignacio</p>
         
         <div class="info-rectangle">
-            <div class="about-header" onclick="toggleText('about-text')" title="Click para ver más">
+            <div class="about-header" onclick="toggleText('about-text')" title="Ver más/menos">
                 <img src="/assets/img/mas.png" alt="Icono Sobre mí" class="about-icon">
                 <h2 class="about-title">Sobre mí</h2>
             </div>
-            <div id="about-text" class="info-text">
+            <div id="about-text" class="info-text" style="display: none;">
                 Soy estudiante de la Licenciatura en Sistemas de Información en la UADER y actualmente tengo 19 años. En estos momentos, estoy finalizando el segundo año de la carrera. Hace dos años me mudé a Concepción del Uruguay, aunque soy oriundo de Rosario del Tala.
             </div>
         </div>
 
         <div class="info-rectangle">
-            <div class="about-header" onclick="toggleText('skills-text')" title="Click para ver más">
+            <div class="about-header" onclick="toggleText('skills-text')" title="Ver más/menos">
                 <img src="/assets/img/mas.png" alt="Icono Mis habilidades" class="about-icon">
                 <h2 class="about-title">Mis habilidades en Programación y Software</h2>
             </div>
-            <div id="skills-text" class="info-text">
+            <div id="skills-text" class="info-text" style="display: none;">
                 <ul>
                     <li><img src="/assets/img/logo_python.png" alt="Python" class="skill-icon"> Conocimientos sobre Python</li>
                     <li><img src="/assets/img/logo_java.png" alt="Java" class="skill-icon"> Conocimientos sobre Java</li>
@@ -66,11 +66,11 @@
         </div>
 
         <div class="info-rectangle">
-            <div class="about-header" onclick="toggleText('courses-text')" title="Click para ver más">
+            <div class="about-header" onclick="toggleText('courses-text')" title="Ver más/menos">
                 <img src="/assets/img/mas.png" alt="Icono Cursos realizados" class="about-icon">
                 <h2 class="about-title">Cursos realizados</h2>
             </div>
-            <div id="courses-text" class="info-text">
+            <div id="courses-text" class="info-text" style="display: none;">
                 <ul>
                     <li><img src="/assets/img/logo_uader.png" alt="Curso 1" class="course-icon"> Curso de Programacion en Java (2023)</li>
                 </ul>
@@ -98,8 +98,16 @@
 
 <script>
 function toggleText(id) {
-    const element = document.getElementById(id);
-    element.style.display = element.style.display === "none" ? "block" : "none";
+    const textElement = document.getElementById(id);
+    const icon = textElement.previousElementSibling.querySelector('img');
+    
+    if (textElement.style.display === 'none' || textElement.style.display === '') {
+        textElement.style.display = 'block';
+        icon.src = '/assets/img/menos.png';
+    } else {
+        textElement.style.display = 'none';
+        icon.src = '/assets/img/mas.png';
+    }
 }
 </script>
 
